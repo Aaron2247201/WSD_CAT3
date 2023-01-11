@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form ng-submit="gData()">
+        <div class="columns mt-4 is-centered">
+            <label for="Emp_Salary" class="label">Select Emp_Salary Limit</label>
+            <select ng-model="Emp_Salary" id="" required ng-change="gData()"  class="ml-5">
+                <option selected disabled value="">Select one</option>
+                <option value="120000">>120000</option>
+                <option value="150000">>150000</option>
+                <option value="200000">>200000</option>
+            </select>
+        </div>
+        <div class="columns mt-4 mb-6 is-centered">
+            <input type="submit" value="Search" class="button is-link" />
+        </div>
+        </form>
+        <section id="tableSection">
+            <table class="table is-centered">
+                <thead>
+                    <tr>
+                        <th scope="col">Emp_ID</th>
+                        <th scope="col">Emp_Name</th>
+                        <th scope="col">Emp_Designation</th>
+                        <th scope="col">Emp_Department</th>
+                        <th scope="col">Emp_Salary</th>
+                        <th scope="col">Emp_Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in datas">
+                        <td scope="row">{{data.Emp_ID}}</td>
+                        <td>{{data.Emp_Name}}</td>
+                        <td>{{data.Emp_Designation}}</td>
+                        <td>{{data.Emp_Department}}</td>
+                        <td>{{data.Emp_Salary}}</td>
+                        <td>{{data.Emp_Location}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

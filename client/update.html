@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+
+<body>
+    <br> <br>
+    <div class="container">
+        <form ng-submit="updateEntry()">
+            <div class="columns">
+                        <label for="Emp_ID" class="label">Emp_ID</label>
+                        <select ng-model="Emp_ID" id="" class="ml-5" required ng-options="data.Emp_ID for data in datas" ng-change="getId()">
+                            <option selected disabled value="">Select one</option>
+                        </select>
+                    </div>
+                    <div class="columns mt-4">
+                        <label for="Emp_Name" class="label">Emp_Name</label>
+                        <input type="text" ng-model="Emp_Name" class="input ml-5" required>
+                    </div>
+                    <div class="columns mt-4">
+                        <label for="Emp_Salary" class="label">Emp_Salary</label>
+                        <input type="number" ng-model="Emp_Salary" class="input ml-5" required>
+                    </div>
+                        <div class="columns mt-4">
+                        <label for="Emp_Designation" class="label">Emp_Designation</label>
+                        <input type="Emp_Designation" ng-model="Emp_Designation" class="input ml-5" required>
+                    </div>
+                        <div class="columns mt-4">
+                        <label for="Emp_Department" class="label">Emp_Department</label>
+                        <input type="text" ng-model="Emp_Department" class="input ml-5" required>
+                    </div>
+                    <div class="columns mt-4">
+                            <label for="" class="label">Emp_Location</label>
+                            <select ng-model="Emp_Location" id="" required class="ml-5">
+                                <option selected disabled value="">Select one</option>
+                                <option value="MUMBAI">MUMBAI</option>
+                                <option value="CHENNAI">CHENNAI</option>
+                                <option value="KERALA">KERALA</option>
+                            </select>
+                        </div>
+                            <div class="columns is-centered mt-6">
+                <input type="submit" value="Update" class="button is-link">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
